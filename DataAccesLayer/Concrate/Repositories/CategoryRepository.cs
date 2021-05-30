@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,7 +14,7 @@ namespace DataAccesLayer.Concrate.Repositories
     {
         Context c = new Context();
         DbSet<Category> _object;
-        public void Delete(Category p)
+        public void Delete(Category p) 
         {
             _object.Remove(p);
             c.SaveChanges();
@@ -29,7 +30,10 @@ namespace DataAccesLayer.Concrate.Repositories
         {
             return _object.ToList();
         }
-
+        public List<Category> List(Expression<Func<Category, bool>> fiter)
+        {
+            throw new NotImplementedException();
+        }
         public void Update(Category p)
         {
             c.SaveChanges();
