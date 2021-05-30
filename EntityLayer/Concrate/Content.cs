@@ -16,6 +16,8 @@ namespace EntityLayer.Concrate
         public int HeadingID { get; set; }
         /*içeriğin başlığı*/
         public virtual Heading Heading { get; set; }
+        public int WriterID { get; set; }
+        public virtual Writer Writer { get; set; }
 
 
     }
