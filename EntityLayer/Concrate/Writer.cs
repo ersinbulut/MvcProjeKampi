@@ -15,5 +15,7 @@ namespace EntityLayer.Concrate
         public string WriterMail { get; set; }
         public string WriterPassword { get; set; }
 
+
+
     }
 }
