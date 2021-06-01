@@ -25,5 +25,17 @@ namespace BusinessLayer.Concrate
         {
             return _categoryDal.List();
         }
+
+        public void CategoryAddBL(Category p)
+        {
+            if (p.CategoryName==""|| p.CategoryStatus==false|| p.CategoryName.Length<=2)
+            {
+                //hata mesajı
+            }
+            else
+            {
+                _categoryDal.Insert(p);
+            }
+        }
     }
 }
