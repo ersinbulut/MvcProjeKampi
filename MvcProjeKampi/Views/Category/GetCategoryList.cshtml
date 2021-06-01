@@ -8,20 +8,16 @@
 <br />
 <table class="table table-bordered">
     <tr>
-        <th>Kategori Id</th>
-        <th>Kategori Adı</th>
-        <th>Açıklama</th>
+        <th> Id</th>
+        <th> Adı</th>
         <th>Durum</th>
-        <th>Güncelle</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td>@item.CategoryID</td>
             <td>@item.CategoryName</td>
-            <td>@item.CategoryDescription</td>
             <td>@item.CategoryStatus</td>
-            <td><button class="btn btn-success">Güncelle</button></td>
         </tr>
     }
 </table>
